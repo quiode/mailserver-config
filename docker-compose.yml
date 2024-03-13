@@ -10,7 +10,7 @@ services:
     image: mailserver/docker-mailserver
     container_name: mailserver
     # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
-    hostname: mail.dominik-schwaiger.ch
+    hostname: dominik-schwaiger.vsos.ethz.ch
     env_file: mailserver.env
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
