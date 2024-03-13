@@ -14,7 +14,6 @@ services:
     environment:
       - TZ=Europe/Zurich
       - SSL_TYPE=letsencrypt
-    env_file: mailserver.env
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     # To avoid conflicts with yaml base-60 float, DO NOT remove the quotation marks.
