@@ -12,6 +12,7 @@ services:
     # Provide the FQDN of your mail server here (Your DNS MX record should point to this value)
     hostname: dominik-schwaiger.vsos.ethz.ch
     environment:
+      - POSTFIX_MESSAGE_SIZE_LIMIT=50000000 # 50mb
       - TZ=Europe/Zurich
       - SSL_TYPE=letsencrypt
     # More information about the mail-server ports:
