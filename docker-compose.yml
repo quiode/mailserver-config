@@ -41,3 +41,5 @@ services:
       test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
       timeout: 3s
       retries: 0
+    cap_add:
+      - NET_ADMIN
