@@ -15,6 +15,7 @@ services:
       - POSTFIX_MESSAGE_SIZE_LIMIT=50000000 # 50mb
       - TZ=Europe/Zurich
       - SSL_TYPE=letsencrypt
+      - PERMIT_DOCKER=host # TODO:  term fix, problem: spf reject
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     # To avoid conflicts with yaml base-60 float, DO NOT remove the quotation marks.
