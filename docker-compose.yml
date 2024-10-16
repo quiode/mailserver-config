@@ -16,6 +16,8 @@ services:
       - TZ=Europe/Zurich
       - SSL_TYPE=letsencrypt
       - ENABLE_FAIL2BAN=1
+      - SPAMASSASSIN_SPAM_TO_INBOX=1
+      - MOVE_SPAM_TO_JUNK=1
     # More information about the mail-server ports:
     # https://docker-mailserver.github.io/docker-mailserver/latest/config/security/understanding-the-ports/
     # To avoid conflicts with yaml base-60 float, DO NOT remove the quotation marks.
@@ -32,6 +34,7 @@ services:
       - /docker-data/dms/config/:/tmp/docker-mailserver/
       - /etc/localtime:/etc/localtime:ro
       - /docker-data/certbot/certs:/etc/letsencrypt
+      - /docker-data/dms/cron/sa-learn:/etc/cron.d/sa-learn
     restart: always
     stop_grace_period: 1m
     healthcheck:
